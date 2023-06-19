@@ -22,7 +22,7 @@ You can run the script in a docker container:
 docker run -it --rm \
     -e API_KEY=<dreamhost_api_key> \
     -e DOMAIN=<my_domain.com>
-    raydouglass/dreamhost-dynamicdns:latest
+    raydouglass/dreamhost-dynamic-dns:latest
 ```
 
 ## Configuration
