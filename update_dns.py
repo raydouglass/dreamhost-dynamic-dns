@@ -4,11 +4,13 @@ import requests
 
 KEY = os.environ['API_KEY']
 DOMAIN = os.environ['DOMAIN']
+IP_LOOKUP_URL=os.environ.get('IP_LOOKUP_URL', 'https://api.ipify.org/?format=text')
 TYPE = 'A'
 
 
 def get_ip():
-    res = requests.get('https://wtfismyip.com/text')
+    res = requests.get(IP_LOOKUP_URL)
+    res.raise_for_status()
     return res.text.strip()
 
 
